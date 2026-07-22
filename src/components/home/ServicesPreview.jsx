@@ -33,36 +33,36 @@ function ServicesPreview() {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-12 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <span className="text-green-600 font-bold uppercase">
             Our Services
           </span>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3">
             Healthcare Services
           </h2>
 
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            We provide professional healthcare services with experienced doctors,
-            nurses and caregivers for patients of every age.
+            We provide professional healthcare services with experienced
+            doctors, nurses and caregivers for patients of every age.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-3xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+              className="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-2 transition"
             >
               <div className="w-16 h-16 rounded-full bg-blue-700 text-white flex items-center justify-center text-3xl mb-6">
                 {service.icon}
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">
                 {service.title}
               </h3>
 
@@ -77,6 +77,7 @@ function ServicesPreview() {
           ))}
 
         </div>
+
       </div>
     </section>
   );

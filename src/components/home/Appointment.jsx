@@ -1,53 +1,56 @@
 function Appointment() {
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-700 to-green-500">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-12 md:py-24 bg-gradient-to-r from-blue-700 to-green-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-white">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Book an Appointment
           </h2>
 
-          <p className="text-white mt-4">
+          <p className="text-white mt-4 text-sm sm:text-base">
             Fill out the form below and our team will contact you.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-10">
+        {/* Form */}
+        <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-10">
 
-          <form className="grid md:grid-cols-2 gap-6">
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
             <input
               type="text"
               placeholder="Full Name"
-              className="border rounded-xl p-4"
+              className="border rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-600"
             />
 
             <input
               type="email"
               placeholder="Email"
-              className="border rounded-xl p-4"
+              className="border rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-600"
             />
 
             <input
               type="tel"
               placeholder="Phone Number"
-              className="border rounded-xl p-4"
+              className="border rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-600"
             />
 
             <input
               type="date"
-              className="border rounded-xl p-4"
+              className="border rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-600"
             />
 
             <textarea
               rows="5"
               placeholder="Your Message"
-              className="md:col-span-2 border rounded-xl p-4"
+              className="md:col-span-2 border rounded-xl p-4 outline-none focus:ring-2 focus:ring-blue-600"
             ></textarea>
 
             <button
-              className="md:col-span-2 bg-blue-700 hover:bg-blue-800 text-white py-4 rounded-xl font-semibold"
+              type="submit"
+              className="md:col-span-2 bg-blue-700 hover:bg-blue-800 text-white py-4 rounded-xl font-semibold transition"
             >
               Book Appointment
             </button>

@@ -22,45 +22,52 @@ function Doctors() {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-12 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-14">
+        {/* Heading */}
+        <div className="text-center mb-12">
           <p className="text-green-600 font-bold uppercase">
             Our Doctors
           </p>
 
-          <h2 className="text-5xl font-bold text-blue-900 mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mt-3">
             Meet Our Specialists
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Doctors Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {doctors.map((doctor, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300"
             >
               <img
                 src={doctor.image}
                 alt={doctor.name}
-                className="w-full h-80 object-cover"
+                className="w-full h-64 sm:h-72 lg:h-80 object-cover"
               />
 
               <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-xl sm:text-2xl font-bold">
                   {doctor.name}
                 </h3>
 
                 <p className="text-green-600 mt-2">
                   {doctor.specialty}
                 </p>
+
+                <button className="mt-5 bg-blue-700 hover:bg-blue-800 text-white px-5 py-2 rounded-lg transition">
+                  View Profile
+                </button>
               </div>
             </div>
           ))}
 
         </div>
+
       </div>
     </section>
   );

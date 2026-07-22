@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-blue-900 text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="w-full bg-blue-900 text-white pt-12 md:pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Logo */}
           <div>
@@ -15,9 +15,9 @@ function Footer() {
               HEALTH CARE
             </h2>
 
-            <p className="mt-4 text-gray-300">
-              Providing trusted home healthcare services with qualified doctors,
-              nurses and caregivers.
+            <p className="mt-4 text-gray-300 leading-7">
+              Providing trusted home healthcare services with qualified
+              doctors, nurses and caregivers.
             </p>
           </div>
 
@@ -29,19 +29,25 @@ function Footer() {
 
             <ul className="space-y-3">
               <li>
-                <NavLink to="/" className="hover:text-lime-400">
+                <NavLink to="/" className="hover:text-lime-400 transition">
                   Home
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/services" className="hover:text-lime-400">
+                <NavLink
+                  to="/services"
+                  className="hover:text-lime-400 transition"
+                >
                   Services
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/contact" className="hover:text-lime-400">
+                <NavLink
+                  to="/contact"
+                  className="hover:text-lime-400 transition"
+                >
                   Contact
                 </NavLink>
               </li>
@@ -75,9 +81,9 @@ function Footer() {
 
         </div>
 
-        <hr className="my-10 border-blue-700" />
+        <hr className="my-8 border-blue-700" />
 
-        <p className="text-center text-gray-400">
+        <p className="text-center text-gray-400 text-sm">
           © 2026 Hoku Health Care. All Rights Reserved.
         </p>
 

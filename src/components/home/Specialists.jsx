@@ -23,24 +23,27 @@ const specialists = [
 
 function Specialists() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-12 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
           Our Specialists
         </h2>
 
-        <p className="text-center text-gray-500 mb-12">
+        <p className="text-center text-gray-500 mb-10">
           Meet our experienced healthcare professionals.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
           {specialists.map((item, index) => (
             <div
               key={index}
-              className="bg-green-50 rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+              className="bg-green-50 rounded-2xl shadow-lg p-6 text-center hover:-translate-y-2 hover:shadow-2xl transition"
             >
-              <div className="text-6xl mb-5">{item.icon}</div>
+              <div className="text-5xl mb-4">
+                {item.icon}
+              </div>
 
               <h3 className="text-xl font-bold mb-3">
                 {item.name}
@@ -51,6 +54,7 @@ function Specialists() {
               </p>
             </div>
           ))}
+
         </div>
 
       </div>
